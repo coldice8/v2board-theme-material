@@ -54,3 +54,16 @@ export interface IUserSubscribe {
   subscribe_url: string;
   reset_day: number;
 };
+
+/**
+ * 代办事项
+ * @property {number} 0 - 待付订单
+ * @property {number} 1 - 代办工单
+ * @property {number} 2 - 待确认邀请
+ */
+export type TUserStat = {
+  0: number;
+  1: number;
+  2: number;
+};
+
