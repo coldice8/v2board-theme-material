@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^10.3.0",
     "vue": "^3.3.4",
     "vue-m-message": "^4.0.2",
     "vuetify": "^3.3.11"
