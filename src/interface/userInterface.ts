@@ -16,3 +16,41 @@ export interface IUserInfo {
   transfer_enable: number | null,
   uuid: string,
 };
+
+interface IUserSubscribeDataPlan {
+  id: number;
+  group_id: number;
+  transfer_enable: number;
+  name: string;
+  speed_limit: number;
+  show: number;
+  sort: null | any;
+  renew: number;
+  content: string;
+  month_price: number;
+  quarter_price: number;
+  half_year_price: number;
+  year_price: number;
+  two_year_price: number;
+  three_year_price: number;
+  onetime_price: number;
+  reset_price: number;
+  reset_traffic_method: null | any;
+  capacity_limit: number;
+  created_at: number;
+  updated_at: number;
+};
+
+export interface IUserSubscribe {
+  plan_id: number;
+  token: string;
+  expired_at: number;
+  u: number;
+  d: number;
+  transfer_enable: number;
+  email: string;
+  uuid: string;
+  plan: IUserSubscribeDataPlan;
+  subscribe_url: string;
+  reset_day: number;
+};
