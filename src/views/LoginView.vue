@@ -1,22 +1,25 @@
 <template>
-  <v-container class="container d-flex justify-center align-center">
-    <v-card width="400">
-      <template v-slot:title>Material Board</template>
+  <div class="background-gradient">
+    <v-container class="container d-flex justify-center align-center">
+      <v-card width="400">
+        <template v-slot:title>Material Board</template>
 
-      <template v-slot:subtitle>这是副标题</template>
+        <template v-slot:subtitle>这是副标题</template>
 
-      <template v-slot:text>
-        <v-text-field v-model="form.email" label="邮箱" type="email" prepend-inner-icon="mdi-email" variant="outlined" />
-        <v-text-field v-model="form.password" label="密码" type="password" prepend-inner-icon="mdi-lock" variant="outlined" />
-        <v-btn block prepend-icon="mdi-login-variant" @click="login" :loading="loading">登录</v-btn>
-      </template>
+        <template v-slot:text>
+          <v-text-field v-model="form.email" label="邮箱" type="email" prepend-inner-icon="mdi-email" variant="outlined" />
+          <v-text-field v-model="form.password" label="密码" type="password" prepend-inner-icon="mdi-lock"
+            variant="outlined" />
+          <v-btn block prepend-icon="mdi-login-variant" @click="login" :loading="loading">登录</v-btn>
+        </template>
 
-      <v-card-actions>
-        <v-btn size="small">注册</v-btn>
-        <v-btn size="small">忘记密码</v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-container>
+        <v-card-actions>
+          <v-btn size="small">注册</v-btn>
+          <v-btn size="small">忘记密码</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -39,7 +42,7 @@ const login = () => {
     loading.value = true;
     fetch('/api/v1/passport/auth/login', {
       method: 'POST',
-      headers: {'content-type': 'application/x-www-form-urlencoded'},
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(form.value)
     })
       .then(response => response.json())
@@ -73,6 +76,5 @@ onMounted(() => {
 <style scoped lang="less">
 .container {
   height: 100vh;
-  background: linear-gradient(45deg, #ee775226, #e73c7e1f, #83deff7a);
 }
 </style>
