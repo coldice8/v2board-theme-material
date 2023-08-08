@@ -67,3 +67,24 @@ export type TUserStat = {
   2: number;
 };
 
+/**
+ * 公告信息
+ * @property {number} id - 公告id
+ * @property {string} title - 标题
+ * @property {string} content - 内容
+ * @property {string} show - 是否显示
+ * @property {string | null} img_url - 背景图片
+ * @property {string[] | null} string - 标签
+ * @property {number} created_at - 创建时间
+ * @property {number} updated_at - 更新时间
+ */
+export type TUserNoticeFetch = {
+  id: number;
+  title: string | null;
+  content: string | null;
+  show: number;
+  img_url: string | null;
+  tags: string[] | null;
+  created_at: number;
+  updated_at: number;
+}[];
