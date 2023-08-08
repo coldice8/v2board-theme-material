@@ -1,0 +1,18 @@
+export interface IUserInfo {
+  avatar_url: string,
+  balance: number,
+  banned: number,
+  commission_balance: number,
+  commission_rate: number | null,
+  created_at: number,
+  discount: number | null,
+  email: string,
+  expired_at: number | null,
+  last_login_at: string | null,
+  plan_id: number | null,
+  remind_expire: number | null,
+  remind_traffic: number | null,
+  telegram_id: number | null,
+  transfer_enable: number | null,
+  uuid: string,
+};
