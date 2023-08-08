@@ -8,6 +8,9 @@ dependencies:
   vue:
     specifier: ^3.3.4
     version: 3.3.4
+  vue-m-message:
+    specifier: ^4.0.2
+    version: 4.0.2
   vuetify:
     specifier: ^3.3.11
     version: 3.3.11(typescript@5.1.6)(vite-plugin-vuetify@1.0.2)(vue-i18n@9.2.2)(vue@3.3.4)
@@ -1195,6 +1198,10 @@ packages:
       '@intlify/vue-devtools': 9.2.2
       '@vue/devtools-api': 6.5.0
       vue: 3.3.4
+
+  /vue-m-message@4.0.2:
+    resolution: {integrity: sha512-6rTKtIzj2vXyyY6YIcSHDmJNz4R1HuxATgr8gf0c+DjcknwCkmfBggKNDIgshnCyqgL70TWsVrgcqQzl4xsYfQ==}
+    dev: false
 
   /vue-router@4.2.4(vue@3.3.4):
     resolution: {integrity: sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ==}
