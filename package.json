@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
+    "qrcode.vue": "^3.4.1",
     "vue": "^3.3.4",
     "vue-m-message": "^4.0.2",
     "vuetify": "^3.3.11"
