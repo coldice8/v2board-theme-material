@@ -18,3 +18,16 @@ export const convertTimestampToDateTime = (timestamp: number, includeTime: boole
 export const getTransferPercentage = (data: IUserSubscribe) => {
   return Math.ceil(((data.u + data.d) / data.transfer_enable) * 100);
 };
+
+export const formatBytes = (bytes: number): string => {
+  const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+  let index = 0;
+
+  while (bytes >= 1024 && index < units.length - 1) {
+    bytes /= 1024;
+    index++;
+  }
+
+  return `${bytes.toFixed(2)} ${units[index]}`;
+};
+
