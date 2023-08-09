@@ -1,5 +1,5 @@
 <template>
-  <v-card v-if="userSubscribe" class="mx-auto" :title="`我的订阅 ${userSubscribe.plan.name}`">
+  <v-card v-if="userSubscribe" height="100%" class="mx-auto d-flex flex-column align-space-between" :title="`我的订阅 ${userSubscribe.plan.name}`">
     <v-card-text>
       <div class="d-flex justify-space-between align-end">
         <div>
