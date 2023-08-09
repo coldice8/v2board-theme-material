@@ -9,7 +9,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CarouselNotice: typeof import('./src/components/CarouselNotice.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SubscribeInfoCard: typeof import('./src/components/SubscribeInfoCard.vue')['default']
   }
 }
