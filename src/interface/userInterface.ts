@@ -83,7 +83,7 @@ export type TUserNoticeFetch = {
   title: string | null;
   content: string | null;
   show: number;
-  img_url: string | null;
+  img_url: string | undefined;
   tags: string[] | null;
   created_at: number;
   updated_at: number;
