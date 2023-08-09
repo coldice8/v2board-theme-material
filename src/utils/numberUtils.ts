@@ -1,3 +1,5 @@
+import { IUserSubscribe } from "../interface/userInterface";
+
 export const convertTimestampToDateTime = (timestamp: number, includeTime: boolean = true): string => {
   const date = new Date(timestamp * 1000);
   const year = date.getFullYear();
@@ -11,4 +13,8 @@ export const convertTimestampToDateTime = (timestamp: number, includeTime: boole
   if (includeTime) formattedDateTime += ` ${hours}:${minutes}:${seconds}`;
 
   return formattedDateTime;
+};
+
+export const getTransferPercentage = (data: IUserSubscribe) => {
+  return Math.ceil(((data.u + data.d) / data.transfer_enable) * 100);
 };
