@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" color="grey-lighten-5">
-      
+      <NavBar />
     </v-navigation-drawer>
 
     <v-app-bar>
