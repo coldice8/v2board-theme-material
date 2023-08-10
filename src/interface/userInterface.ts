@@ -88,3 +88,51 @@ export type TUserNoticeFetch = {
   created_at: number;
   updated_at: number;
 }[];
+
+/**
+ * 订阅计划
+ * @property {number} id - ID
+ * @property {number} group_id - 组ID
+ * @property {number} transfer_enable - 传输限制
+ * @property {string} name - 名称
+ * @property {number} speed_limit - 速度限制
+ * @property {number} show - 是否显示
+ * @property {null} sort - 排序
+ * @property {number} renew - 是否续费
+ * @property {string} content - 内容
+ * @property {number} month_price - 月价格
+ * @property {number} quarter_price - 季度价格
+ * @property {number} half_year_price - 半年价格
+ * @property {number} year_price - 年价格
+ * @property {number} two_year_price - 两年价格
+ * @property {number} three_year_price - 三年价格
+ * @property {number} onetime_price - 一次性价格
+ * @property {number} reset_price - 重置价格
+ * @property {null} reset_traffic_method - 重置流量方法
+ * @property {number} capacity_limit - 容量限制
+ * @property {number} created_at - 创建时间戳
+ * @property {number} updated_at - 更新时间戳
+ */
+export type TUserPlanFetch = {
+  id: number;
+  group_id: number;
+  transfer_enable: number;
+  name: string;
+  speed_limit: number;
+  show: number;
+  sort: null;
+  renew: number;
+  content: string;
+  month_price: number;
+  quarter_price: number;
+  half_year_price: number;
+  year_price: number;
+  two_year_price: number;
+  three_year_price: number;
+  onetime_price: number;
+  reset_price: number;
+  reset_traffic_method: null;
+  capacity_limit: number;
+  created_at: number;
+  updated_at: number;
+}[];

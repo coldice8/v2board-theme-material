@@ -14,6 +14,7 @@ const router = useRouter();
 
 const items = ref([
   { name: '主页', to: '/dashboard', icon: 'mdi-monitor-dashboard' },
+  { name: '订阅商店', to: '/dashboard/plan', icon: 'mdi-store-plus' },
 ]);
 
 const click = (to: string) => router.push(to);

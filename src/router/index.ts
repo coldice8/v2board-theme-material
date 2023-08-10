@@ -20,6 +20,10 @@ const routes = [
         path: '', 
         component: () => import("../views/Dashboard/HomeView.vue") 
       },
+      { 
+        path: 'plan', 
+        component: () => import("../views/Dashboard/PlanView.vue") 
+      },
     ]
   }
 ]
