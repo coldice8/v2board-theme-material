@@ -209,3 +209,56 @@ export type TUserServerFetch = {
   ruleSettings: object | null;
   dnsSettings: object | null;
 }[];
+
+
+/**
+ * 订单信息
+ * @property {number | null} invite_user_id - 邀请人ID
+ * @property {number} plan_id - 订阅计划
+ * @property {number | null} coupon_id - 优惠券ID
+ * @property {number | null} payment_id - 付款方式ID
+ * @property {number} type - 类型
+ * @property {string} period - 付款周期
+ * @property {string} trade_no - 订单号
+ * @property {string} callback_no - 回调单号
+ * @property {number} total_amount - 总金额
+ * @property {number | null} handling_amount - 未知
+ * @property {number | null} discount_amount - 折扣金额
+ * @property {number | null} surplus_amount - 剩余金额
+ * @property {number | null} refund_amount - 退款金额
+ * @property {number} balance_amount - 余额
+ * @property {null} surplus_order_ids - 剩余订单 ID
+ * @property {number} status - 状态
+ * @property {number} commission_status - 佣金状态
+ * @property {number} commission_balance - 佣金余额
+ * @property {number | null} actual_commission_balance - 实际佣金余额
+ * @property {number} paid_at - 付款时间
+ * @property {number} created_at - 创建时间
+ * @property {number} updated_at - 更新时间
+ * @property {Plan} plan - 订阅计划
+ */
+export type TUserOrderFetch = {
+  invite_user_id: number | null;
+  plan_id: number;
+  coupon_id: number | null;
+  payment_id: number | null;
+  type: number;
+  period: string;
+  trade_no: string;
+  callback_no: string;
+  total_amount: number;
+  handling_amount: number | null;
+  discount_amount: number | null;
+  surplus_amount: number | null;
+  refund_amount: number | null;
+  balance_amount: number;
+  surplus_order_ids: null;
+  status: number;
+  commission_status: number;
+  commission_balance: number;
+  actual_commission_balance: number | null;
+  paid_at: number;
+  created_at: number;
+  updated_at: number;
+  plan: TUserPlanFetch;
+}[];

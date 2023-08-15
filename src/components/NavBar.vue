@@ -16,6 +16,7 @@ const items = ref([
   { name: '主页', to: '/dashboard', icon: 'mdi-monitor-dashboard' },
   { name: '订阅商店', to: '/dashboard/plan', icon: 'mdi-store-plus' },
   { name: '节点列表', to: '/dashboard/node', icon: 'mdi-resistor-nodes' },
+  { name: '我的订单', to: '/dashboard/order', icon: 'mdi-order-bool-ascending' },
 ]);
 
 const click = (to: string) => router.push(to);

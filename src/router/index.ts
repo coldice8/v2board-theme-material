@@ -28,6 +28,10 @@ const routes = [
         path: 'node', 
         component: () => import("../views/Dashboard/NodeView.vue") 
       },
+      { 
+        path: 'order', 
+        component: () => import("../views/Dashboard/OrderView.vue") 
+      },
     ]
   }
 ]
