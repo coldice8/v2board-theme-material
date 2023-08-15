@@ -136,3 +136,76 @@ export type TUserPlanFetch = {
   created_at: number;
   updated_at: number;
 }[];
+
+/**
+ * 节点信息
+ * @property {number} id - ID
+ * @property {string[]} group_id - 组ID
+ * @property {number | null} route_id - 路由ID
+ * @property {number | null} parent_id - 父节点ID
+ * @property {string[] | null} tags - 节点标签
+ * @property {string} rate - 节点倍率
+ * @property {string} host - 连接地址
+ * @property {number} port - 连接端口
+ * @property {number} server_port - 服务端端口
+ * @property {number | null} allow_insecure - 允许不安全连接
+ * @property {null | string} server_name - 服务名称
+ * @property {number} show - 是否展示
+ * @property {null} sort - 未知
+ * @property {number} created_at - 创建时间
+ * @property {number} updated_at - 更新时间
+ * @property {string} type - 节点类型
+ * @property {number | null} last_check_at - 最后在线时间
+ * @property {number} is_online - 是否在线
+ * @property {string} cache_key - 缓存key
+ * @property {string | null} cipher - 加密方式
+ * @property {string | null} obfs - 混淆模式
+ * @property {object | null} obfs_settings - 混淆模式参数
+ * @property {number | null} up_mbps - 上行速率
+ * @property {number | null} down_mbps - 下行速率
+ * @property {string | null} server_key - 服务密钥
+ * @property {number | null} insecure - 允许不安全
+ * @property {number | null} tls - tls参数
+ * @property {string | null} network - 传输协议
+ * @property {null} rules - 未知
+ * @property {object | null} networkSettings - VMESS 参数
+ * @property {object | null} tlsSettings - VMESS 参数
+ * @property {object | null} ruleSettings - VMESS 参数
+ * @property {object | null} dnsSettings - VMESS 参数
+ */
+export type TUserServerFetch = {
+  id: number;
+  group_id: string[];
+  route_id: number | null;
+  parent_id: number | null;
+  tags: string[] | null;
+  name: string;
+  rate: string;
+  host: string;
+  port: number;
+  server_port: number;
+  allow_insecure: number | null;
+  server_name: null | string;
+  show: number;
+  sort: null;
+  created_at: number;
+  updated_at: number;
+  type: string;
+  last_check_at: number | null;
+  is_online: number;
+  cache_key: string;
+  cipher: string | null;
+  obfs: string | null;
+  obfs_settings: object | null;
+  up_mbps: number | null;
+  down_mbps: number | null;
+  server_key: string | null;
+  insecure: number | null;
+  tls: number | null;
+  network: string | null;
+  rules: null;
+  networkSettings: object | null;
+  tlsSettings: object | null;
+  ruleSettings: object | null;
+  dnsSettings: object | null;
+}[];

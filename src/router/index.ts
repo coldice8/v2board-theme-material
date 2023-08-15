@@ -24,6 +24,10 @@ const routes = [
         path: 'plan', 
         component: () => import("../views/Dashboard/PlanView.vue") 
       },
+      { 
+        path: 'node', 
+        component: () => import("../views/Dashboard/NodeView.vue") 
+      },
     ]
   }
 ]
