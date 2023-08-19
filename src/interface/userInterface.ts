@@ -262,3 +262,27 @@ export type TUserOrderFetch = {
   updated_at: number;
   plan: TUserPlanFetch;
 }[];
+
+/**
+ * 流量记录
+ * @property {number} id - ID
+ * @property {number} user_id - 用户ID
+ * @property {string} server_rate - 服务器速率
+ * @property {number} u - 上传量
+ * @property {number} d - 下载量
+ * @property {string} record_type - 记录类型
+ * @property {number} record_at - 记录时间
+ * @property {number} created_at - 创建时间
+ * @property {number} updated_at - 更新时间
+ */
+export type TUserStatTrafficLog = {
+  id: number;
+  user_id: number;
+  server_rate: string;
+  u: number;
+  d: number;
+  record_type: string;
+  record_at: number;
+  created_at: number;
+  updated_at: number;
+}[];

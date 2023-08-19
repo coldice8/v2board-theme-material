@@ -36,6 +36,10 @@ const routes = [
         path: 'profile', 
         component: () => import("../views/Dashboard/ProfileView.vue") 
       },
+      { 
+        path: 'traffic', 
+        component: () => import("../views/Dashboard/TrafficView.vue") 
+      },
     ]
   }
 ]
