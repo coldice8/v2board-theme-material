@@ -32,6 +32,10 @@ const routes = [
         path: 'order', 
         component: () => import("../views/Dashboard/OrderView.vue") 
       },
+      { 
+        path: 'profile', 
+        component: () => import("../views/Dashboard/ProfileView.vue") 
+      },
     ]
   }
 ]

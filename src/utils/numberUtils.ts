@@ -31,3 +31,8 @@ export const formatBytes = (bytes: number): string => {
   return `${bytes.toFixed(2)} ${units[index]}`;
 };
 
+export const negatedBooleanValueToNumber = (value: boolean): number => {
+  if (value) return 0;
+  else return 1;
+};
+
