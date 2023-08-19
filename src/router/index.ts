@@ -40,6 +40,10 @@ const routes = [
         path: 'traffic', 
         component: () => import("../views/Dashboard/TrafficView.vue") 
       },
+      { 
+        path: 'ticket', 
+        component: () => import("../views/Dashboard/TicketView.vue") 
+      },
     ]
   }
 ]

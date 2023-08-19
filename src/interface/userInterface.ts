@@ -286,3 +286,64 @@ export type TUserStatTrafficLog = {
   created_at: number;
   updated_at: number;
 }[];
+
+/**
+ * 工单信息
+ * @property {number} created_at - 创建时间
+ * @property {number} id - ID
+ * @property {number} level - 等级
+ * @property {number} reply_status - 回复状态
+ * @property {number} status - 工单状态
+ * @property {string} subject - 工单主题
+ * @property {number} updated_at - 更新时间
+ * @property {number} user_id - 用户ID
+ */
+export type TUserTicket = {
+  created_at: number;
+  id: number;
+  level: number;
+  reply_status: number;
+  status: number;
+  subject: string;
+  updated_at: number;
+  user_id: number;
+}[];
+
+/**
+ * 工单信息
+ * @property {number} id - ID
+ * @property {number} user_id - 用户ID
+ * @property {string} subject - 工单主题
+ * @property {number} level - 等级
+ * @property {number} status - 工单状态
+ * @property {number} reply_status - 回复状态
+ * @property {number} created_at - 创建时间
+ * @property {number} updated_at - 更新时间
+ * @property {array} message - 工单消息
+ * @property {number} message[].id - 消息ID
+ * @property {number} message[].user_id - 用户ID
+ * @property {number} message[].ticket_id - 工单ID
+ * @property {string} message[].message - 消息内容
+ * @property {number} message[].created_at - 创建时间
+ * @property {number} message[].updated_at - 更新时间
+ * @property {number} message[].is_me - 是不是自己发的
+ */
+export type TUserTicketDetail = {
+  id: number;
+  user_id: number;
+  subject: string;
+  level: number;
+  status: number;
+  reply_status: number;
+  created_at: number;
+  updated_at: number;
+  message: {
+    id: number;
+    user_id: number;
+    ticket_id: number;
+    message: string;
+    created_at: number;
+    updated_at: number;
+    is_me: boolean;
+  }[];
+};

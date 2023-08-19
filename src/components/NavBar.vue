@@ -19,6 +19,7 @@ const items = ref([
   { name: '我的订单', to: '/dashboard/order', icon: 'mdi-order-bool-ascending' },
   { name: '个人中心', to: '/dashboard/profile', icon: 'mdi-account' },
   { name: '流量详细', to: '/dashboard/traffic', icon: 'mdi-router-network' },
+  { name: '我的工单', to: '/dashboard/ticket', icon: 'mdi-ticket-confirmation' },
 ]);
 
 const click = (to: string) => router.push(to);
