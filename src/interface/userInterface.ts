@@ -135,7 +135,7 @@ export type TUserPlanFetch = {
   capacity_limit: number;
   created_at: number;
   updated_at: number;
-}[];
+};
 
 /**
  * 节点信息
@@ -260,7 +260,7 @@ export type TUserOrderFetch = {
   paid_at: number;
   created_at: number;
   updated_at: number;
-  plan: TUserPlanFetch;
+  plan: TUserPlanFetch[];
 }[];
 
 /**
