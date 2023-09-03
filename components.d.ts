@@ -10,6 +10,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CarouselNotice: typeof import('./src/components/CarouselNotice.vue')['default']
+    LoadingMask: typeof import('./src/components/LoadingMask.vue')['default']
     MessageItem: typeof import('./src/components/MessageItem.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
