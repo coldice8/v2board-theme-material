@@ -1,4 +1,6 @@
 <template>
+  <LoadingMask :show="loading" />
+
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="item in userPlanFetch">
       <v-card>
@@ -18,7 +20,10 @@
         <v-card-text v-html="item.content" />
 
         <v-card-actions>
-          <v-btn block prepend-icon="mdi-plus" variant="flat" color="indigo-darken-3">立即购买</v-btn>
+          <v-btn block prepend-icon="mdi-plus" variant="flat" color="indigo-darken-3">
+            立即购买
+            <PlanOrderDialog :planId="String(item.id)" />
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -31,13 +36,17 @@ import { TUserPlanFetch } from '../../interface/userInterface';
 
 const auth_data = useLocalStorage('auth_data', '');
 
-const userPlanFetch: Ref<TUserPlanFetch | undefined> = ref();
+const loading = ref(false);
+
+const userPlanFetch: Ref = ref<TUserPlanFetch>();
 
 const getUserPlanFetch = () => {
+  loading.value = true;
   fetch('/api/v1/user/plan/fetch', { headers: { authorization: auth_data.value } })
     .then(response => response.json())
     .then(response => {
       userPlanFetch.value = response.data;
+      loading.value = false;
     })
     .catch(err => console.error(err));
 };

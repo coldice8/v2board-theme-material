@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     LoadingMask: typeof import('./src/components/LoadingMask.vue')['default']
     MessageItem: typeof import('./src/components/MessageItem.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
+    PlanOrderDialog: typeof import('./src/components/PlanOrderDialog.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SubscribeInfoCard: typeof import('./src/components/SubscribeInfoCard.vue')['default']
