@@ -260,8 +260,7 @@ export type TUserOrderFetch = {
   paid_at: number;
   created_at: number;
   updated_at: number;
-  plan: TUserPlanFetch[];
-}[];
+};
 
 /**
  * 流量记录

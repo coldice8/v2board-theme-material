@@ -43,11 +43,15 @@
 
 <script setup lang="ts">
 import { useLocalStorage } from '@vueuse/core';
-import { TUserOrderFetch } from '../../interface/userInterface';
+import { TUserOrderFetch, TUserPlanFetch } from '../../interface/userInterface';
 import { convertTimestampToDateTime } from '../../utils/numberUtils';
 const auth_data = useLocalStorage('auth_data', '');
 
-const userOrderFetch: Ref<TUserOrderFetch | undefined> = ref();
+export interface TUserOrderFetchArray extends TUserOrderFetch {
+  plan: TUserPlanFetch[];
+}[];
+
+const userOrderFetch: Ref = ref<TUserOrderFetchArray>();
 
 const getUserOrderFetch = () => {
   fetch('/api/v1/user/order/fetch', { headers: { authorization: auth_data.value } })
